@@ -1,0 +1,72 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../vaadin-charts/vaadin-bar-chart.html">
+<link rel="import" href="db-part-frame.html">
+<link rel="import" href="db-part-header.html">
+<!--
+`db-widget-bar`
+A bar chart widget with a header component
+
+@demo demo/index.html
+
+A few examples:
+`<db-widget-bar></db-widget-bar>`
+-->
+<dom-module id="db-widget-bar">
+    <template>
+        <style>
+
+        vaadin-bar-chart{
+          width: 100%;
+        }
+
+        </style>
+        <db-part-frame header="Top Grossing Movies">
+          <vaadin-bar-chart id="basic-bar">
+            <chart></chart>
+            <chart-title text=""></chart-title>
+            <x-axis tick-width="0">
+                <labels enabled="false"></labels>
+            </x-axis>
+            <y-axis min="0">
+                <chart-title text=""></chart-title>
+                <labels overflow="justify"></labels>
+            </y-axis>
+            <tooltip value-suffix=" millions"></tooltip>
+            <plot-options>
+                <bar group-padding="0">
+                </bar>
+            </plot-options>
+            <legend></legend>
+            <data-series name="Left Behind">
+                <data>2</data>
+            </data-series>
+            <data-series name="Maze Runner">
+                <data>63</data>
+            </data-series>
+            <data-series name="The Equalizer">
+                <data>61</data>
+            </data-series>
+            <data-series name="Annabelle">
+                <data>31</data>
+            </data-series>
+            <data-series name="Gone Girl">
+                <data>87</data>
+            </data-series>
+            <data-series name="Box Trolls">
+                <data>74</data>
+            </data-series>
+          </vaadin-bar-chart>
+        </db-part-frame>
+    </template>
+
+    <script>
+      Polymer({
+        is: 'db-widget-bar',
+        properties: {
+        }
+      });
+    </script>
+</dom-module>
+
+</body>
+</html>

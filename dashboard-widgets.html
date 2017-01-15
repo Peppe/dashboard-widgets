@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`dashboard-widgets`
+A set of widgets for the dashboard protos
+
+@demo demo/index.html 
+-->
+
+<dom-module id="dashboard-widgets">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'dashboard-widgets',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'dashboard-widgets',
+        },
+      },
+
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,89 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../vaadin-charts/vaadin-sparkline.html">
+<!--
+`db-widget-sparkline`
+A sparkline widget. Contains a big number, an explanation on what it is, a sparkline as well as fields to set low and high values in.
+
+@demo demo/index.html
+
+A few examples:
+`<db-widget-sparkline bigvalue="36K" bigtext="Traffic" high="78" low="23" sparkline="20,23,36,25,27,18,29,18,20,30,33,25,25,25,25,28,23,28,18,16"></db-widget-sparkline>`
+`<db-widget-sparkline bigvalue="$147M" bigtext="Revenue / day" high="147" low="95" sparkline="15,20,12,10,25,22,15,18"></db-widget-sparkline>`
+`<db-widget-sparkline bigvalue="69s" bigtext="Checkout Time" high="106" low="35" sparkline="20,10,22,25,22,22,15,12,12,15,18"></db-widget-sparkline>`
+`<db-widget-sparkline bigvalue="56%" bigtext="Theater Fill Rate" high="99" low="34" sparkline="10,20,15,12,13,19,12,13,14,12,12,20,18,15,12,13,18,19,20,19,12,12,18,14,18,12,15,18,17,12,14,19,12,14,15,19,20,13,18,17,12,19,13,15,12,18"></db-widget-sparkline>`
+-->
+<dom-module id="db-widget-sparkline">
+    <template>
+        <style>
+            :host ::content > * {
+                box-sizing: border-box;
+            }
+
+            :host {
+              display:inline-block;
+              text-align: center;
+              padding:10px;
+              font-family: "Open Sans", sans-serif;
+
+            }
+
+            .big-number {
+              font-size: 26px;
+              color: #474747;
+              font-weight: 300;
+              line-height: 1.35;
+
+            }
+
+            .explanation {
+              font-size: 14px;
+              font-weight: 200;
+              color: #7d7d7d;
+              line-height: 1.35;
+            }
+
+            .sparkline {
+              padding:10px;
+              width:150px;
+              margin: 0 auto;
+            }
+
+            .small-numbers {
+              font-weight: 12px;
+              font-weight: 200;
+              color: #7d7d7d;
+              line-height: 1.35;
+            }
+        </style>
+        <div class="big-number">[[bigvalue]]</div>
+        <div class="explanation">Traffic</div>
+        <div class="sparkline">
+          <vaadin-sparkline style="display:block; width:130px; height:30px;" data="[[sparkline]]"></vaadin-sparkline>
+        </div>
+        <div class="small-numbers"><span>High <b>98</b></span><span style="display:inline-block;width:20px"></span><span>Low <b>35</b></span></div>
+        <content></content>
+    </template>
+
+    <script>
+            Polymer({
+                is: 'db-widget-sparkline',
+                properties: {
+                    bigvalue:{
+                        type: String
+                    },
+                    bigvalue:{
+                        type: String
+                    },
+                    sparkline:{
+                        type: String
+                    },
+                    high:{
+                        type: Number
+                    },
+                    low:{
+                        type: Number
+                    }
+                }
+        });
+    </script>
+</dom-module>

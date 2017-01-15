@@ -1,0 +1,55 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../vaadin-charts/vaadin-sparkline.html">
+<!--
+`db-widget-notes`
+A widget with a textarea to write notes in.
+
+@demo demo/index.html
+
+A few examples:
+`<db-widget-notes></db-widget-notes>`
+-->
+<dom-module id="db-widget-notes">
+    <template>
+        <style>
+            :host {
+              height:100%;
+              display: flex;
+              flex-direction: column;
+
+            }
+
+            textarea{
+              width: 100%;
+              box-sizing: border-box;
+              border: none;
+              border-top: 1px solid #dfdfdf;
+              padding: 20px 20px 0;
+              line-height: 20px;
+              font-size: 13px;
+              background: #fffdf2 url('notes-bg.png') repeat;
+              background-attachment: local;
+              color: #545145;
+              overflow: auto;
+              resize: none;
+            }
+        </style>
+        <db-part-frame header="Notes">
+          <textarea>
+            Remember to:
+            · Zoom in and out in the Sales view
+            · Filter the transactions and drag a set of them to the Reports tab
+            · Create a new report
+            · Change the schedule of the movie theater
+          </textarea>
+        </db-part-frame>
+    </template>
+
+    <script>
+            Polymer({
+                is: 'db-widget-notes',
+                properties: {
+                }
+        });
+    </script>
+</dom-module>
