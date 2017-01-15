@@ -25,7 +25,8 @@ bower install --save Peppe/dashboard-widgets
 
 <db-part-frame header="Top 10 titles by revenue"></db-part-frame>
 ```
-![Screenshot](screenshot.png)
 
 # Usage
 You can get a ready project with the use of this at [https://github.com/Peppe/grid-layout-demo](https://github.com/Peppe/grid-layout-demo)
+
+![Screenshot](screenshot.png)
