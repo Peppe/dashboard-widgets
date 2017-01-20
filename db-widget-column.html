@@ -1,0 +1,81 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../vaadin-charts/vaadin-column-chart.html">
+<link rel="import" href="db-part-frame.html">
+<link rel="import" href="db-part-header.html">
+<!--
+`db-widget-bar`
+A bar chart widget with a header component
+
+@demo demo/index.html
+
+A few examples:
+`<db-widget-bar></db-widget-bar>`
+-->
+<dom-module id="db-widget-column">
+    <template>
+        <style>
+
+        .container {
+          width:100%;
+          height:100%;
+          display:flex;
+        }
+        vaadin-column-chart{
+          width: 100%;
+        }
+
+        </style>
+        <db-part-frame header="foo">
+          <div class="container">
+            <vaadin-column-chart id="column-with-rotated-labels">
+                <chart-title text=""></chart-title>
+                <x-axis>
+                    <categories>Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, Jan
+                    </categories>
+                    <labels rotation="0" align="center">
+                        <chart-style font-size="10px" font-family="Verdana, sans-serif"></chart-style>
+                    </labels>
+                </x-axis>
+                <y-axis>
+                    <chart-title text=""></chart-title>
+                </y-axis>
+                <legend enabled="false"></legend>
+                <tooltip header-format=""
+                         point-format="{point.category} Population in 2008: {series.name}: {point.y:.0f}  millions"></tooltip>
+                <plot-options>
+                    <column group-padding="0.05" border-width="0">
+                        <data-labels align="center" color="#ffffff" enabled="true" y="4" point-format="{point.y}">
+                        </data-labels>
+                    </column>
+                </plot-options>
+                <data-series name="Population">
+                    <data>502,708,890,503,392,263,601,498,702,798,878,377</data>
+                </data-series>
+            </vaadin-column-chart>
+            <div id="numbers">
+              <div class="number">
+                <div class="number-description">24h</div>
+                <div class="number-value">+13</div>
+              </div>
+              <div class="number">
+                <div class="number-description">Jan</div>
+                <div class="number-value">501</div>
+              </div>
+            </div>
+          </div>
+
+
+        </db-part-frame>
+    </template>
+
+    <script>
+      Polymer({
+        is: 'db-widget-column',
+        properties: {
+        }
+      });
+    </script>
+</dom-module>
+
+</body>
+</html>
