@@ -6,7 +6,7 @@ A set of widgets for the dashboard protos.
 bower install --save Peppe/dashboard-widgets
 
 ## Import all the widgets
-```
+```html
 <link rel="import" href="../../bower_components/dashboard-widgets/db-widget-sparkline.html">
 <link rel="import" href="../../bower_components/dashboard-widgets/db-widget-notes.html">
 <link rel="import" href="../../bower_components/dashboard-widgets/db-widget-bar.html">
@@ -14,7 +14,7 @@ bower install --save Peppe/dashboard-widgets
 ```
 
 # Start using them! Here are the examples.
-```
+```html
 <db-widget-sparkline bigvalue="36K" bigtext="Traffic" high="78" low="23" sparkline="20,23,36,25,27,18,29,18,20,30,33,25,25,25,25,28,23,28,18,16"></db-widget-sparkline>
 <db-widget-sparkline bigvalue="$147M" bigtext="Revenue / day" high="147" low="95" sparkline="15,20,12,10,25,22,15,18"></db-widget-sparkline>
 <db-widget-sparkline bigvalue="69s" bigtext="Checkout Time" high="106" low="35" sparkline="20,10,22,25,22,22,15,12,12,15,18"></db-widget-sparkline>
