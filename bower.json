@@ -3,8 +3,8 @@
   "description": "A set of widgets for the dashboard protos",
   "main": "dashboard-widgets.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0",
-    "vaadin-charts": "^3.2.0"
+    "polymer": "Polymer/polymer#2.0-preview",
+    "vaadin-charts": "2.0-preview-hybrid"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

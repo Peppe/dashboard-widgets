@@ -8,36 +8,29 @@
 
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
     <link rel="import" href="../dashboard-widgets.html">
     <link rel="import" href="../db-widget-sparkline.html">
     <link rel="import" href="../db-widget-notes.html">
     <link rel="import" href="../db-widget-bar.html">
     <link rel="import" href="../db-part-frame.html">
     <link rel="import" href="../db-widget-column.html">
-
-
-    <style is="custom-style" include="demo-pages-shared-styles">
-    </style>
   </head>
   <body>
     <div class="vertical-section-container centered">
       <h3>dashboard-widgets demo</h3>
-      <demo-snippet>
-        <template>
+          <h1>hello</h1>
           <dashboard-widgets></dashboard-widgets>
-          <db-widget-sparkline bigvalue="36K" bigtext="Traffic" high="78" low="23" sparkline="20,23,36,25,27,18,29,18,20,30,33,25,25,25,25,28,23,28,18,16"></db-widget-sparkline>
-          <db-widget-sparkline bigvalue="$147M" bigtext="Revenue / day" high="147" low="95" sparkline="15,20,12,10,25,22,15,18"></db-widget-sparkline>
+        <db-widget-sparkline bigvalue="36K" bigtext="Traffic" high="78" low="23" sparkline="20,23,36,25,27,18,29,18,20,30,33,25,25,25,25,28,23,28,18,16"></db-widget-sparkline>
+        <db-widget-sparkline bigvalue="$147M" bigtext="Revenue / day" high="147" low="95" sparkline="15,20,12,10,25,22,15,18"></db-widget-sparkline>
           <db-widget-sparkline bigvalue="69s" bigtext="Checkout Time" high="106" low="35" sparkline="20,10,22,25,22,22,15,12,12,15,18"></db-widget-sparkline>
           <db-widget-sparkline bigvalue="56%" bigtext="Theater Fill Rate" high="99" low="34" sparkline="10,20,15,12,13,19,12,13,14,12,12,20,18,15,12,13,18,19,20,19,12,12,18,14,18,12,15,18,17,12,14,19,12,14,15,19,20,13,18,17,12,19,13,15,12,18"></db-widget-sparkline>
           <db-widget-bar></db-widget-bar>
           <db-widget-notes style="height:400px"></db-widget-notes>
           <db-part-frame header="Top 10 titles by revenue" style="height:400px"></db-part-frame>
           <db-part-frame header="Popular movies" style="height:400px"></db-part-frame>
-          <db-widget-column></db-widget-column>
-        </template>
-      </demo-snippet>
+          <db-widget-column style="height:400px;display:block"></db-widget-column>
+
     </div>
   </body>
 </html>

@@ -14,7 +14,12 @@ A few examples:
 <dom-module id="db-widget-column">
     <template>
         <style>
-
+        :host {
+          height:100%;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
         .container {
           width:100%;
           height:100%;
@@ -24,9 +29,20 @@ A few examples:
           width: 100%;
         }
 
+        #content {
+          flex-grow: 1;
+          display: flex;
+        }
+
+        .numbers {
+          justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+        }
+
         </style>
         <db-part-frame header="foo">
-          <div class="container">
+
             <vaadin-column-chart id="column-with-rotated-labels">
                 <chart-title text=""></chart-title>
                 <x-axis>
@@ -62,9 +78,6 @@ A few examples:
                 <div class="number-value">501</div>
               </div>
             </div>
-          </div>
-
-
         </db-part-frame>
     </template>
 
